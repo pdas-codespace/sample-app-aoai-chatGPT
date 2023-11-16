@@ -191,7 +191,7 @@ def prepare_body_headers_with_data(request):
         "max_tokens": int(AZURE_OPENAI_MAX_TOKENS),
         "top_p": float(AZURE_OPENAI_TOP_P),
         "stop": AZURE_OPENAI_STOP_SEQUENCE.split("|") if AZURE_OPENAI_STOP_SEQUENCE else None,
-        "stream": True,
+        "stream": SHOULD_STREAM,
         "dataSources": []
     }
 
